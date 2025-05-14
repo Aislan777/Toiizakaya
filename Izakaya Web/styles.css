@@ -1,0 +1,574 @@
+h1 {color: black;}
+*{
+    box-sizing:border-box;
+    margin: 0;
+}
+
+
+.navbar {
+    background: #f4cede;
+    height: 162px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    font-size: 1.2rem;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.navbar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 162px; 
+    z-index: 1;
+    width: 1400px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 50px;
+    position: relative;
+}
+
+.navbar__logo-and-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+}
+
+#navbar__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#navbar__logo img {
+    display: block;
+    height: 140px;
+    width: 140px; 
+    object-fit: contain; 
+    position: relative;
+    left: 15px;
+    top: -3px; /* Push the logo down from the top of the navbar */
+    z-index: 2;
+}
+
+.hug-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+    height: 24px;
+    margin-top: -15px; /* Pull the links up to overlap the logo */
+    margin-bottom: 15px; /* Gap from bottom of navbar */
+    gap: 47px; /* This creates the space between the links */
+    z-index: 1;
+}
+
+.hug-menu__link {
+    font-family: 'Aileron', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 8px;
+    /* Remove width here, set it below for ABOUT US only */
+}
+
+.hug-menu__link:first-child {
+    width: 99px;
+    height: 24px;
+}
+
+.hug-menu__link:last-child {
+    width: 100px;
+}
+
+.navbar__toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    color: #fe3721;
+    transition: all 0.3s ease;
+}
+
+/* Header */
+
+.header {
+    position: absolute;
+    width: 1440px;
+    height: 162px;
+    left: calc(50% - 1440px/2);
+    top: 0px;
+}
+
+.toi_0501_1 {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: calc(50% - 140px/2);
+    top: 0px;
+    background: url(toi_0501_1.png);
+}
+
+.instagram-logo {
+    position: absolute;
+    left: 1359px; /* x-coordinate */
+    top: 60px;    /* y-coordinate */
+    width: 31px;
+    height: 31px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 31px;
+    color: #EB6BA4; /* Change to your desired color */
+    text-decoration: none;
+}
+
+.instagram-logo i {
+    font-size: 31px; /* Ensure the icon fits the container */
+}
+
+.rectangle-1 {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    left: calc(50% - 31px/2);
+    top: calc(50% - 31px/2);
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.vector {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: calc(50% - 25px/2);
+    top: calc(50% - 25px/2);
+    background: #EB6BA4;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 47px;
+    position: absolute;
+    width: 255px;
+    height: 24px;
+    left: calc(50% - 255px/2 - 0.5px);
+    top: 130px;
+    border-radius: 0px;
+}
+
+.menu .about-us {
+    width: 99px;
+    height: 24px;
+    font-family: 'Aileron';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.menu .catering {
+    width: 100px;
+    height: 24px;
+    font-family: 'Aileron';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        position: absolute;
+        top: -1000px;
+        opacity: 0; 
+        width: 100%;
+        transition: all 0.5s ease;
+        z-index: -1;
+        background: #131313;
+    }
+    .navbar__menu.active {
+        background-color: #ffffffda;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    #navbar__logo {
+        padding-left: 25px; 
+    }
+
+
+
+    .navbar__toggle .bar {
+    
+        width: 25px; 
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #0b0b0b;
+    }
+
+    .navbar__item {
+        width: 100%;
+    
+    } 
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+ 
+    #mobile-menu {
+        position:absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        }
+}
+
+/* --- Responsive Styles --- */
+@media screen and (max-width: 900px) {
+    .navbar {
+        height: auto;
+        min-height: 80px;
+        padding: 0 10px;
+    }
+    .navbar__container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    .navbar__logo-and-menu {
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #navbar__logo img {
+        height: 90px;
+        width: 90px;
+        margin-top: 10px;
+    }
+    .hug-menu {
+        width: 90vw;
+        max-width: 255px;
+        margin-top: 4px;
+        margin-bottom: 14px;
+        gap: 24px;
+    }
+    .hug-menu__link {
+        font-size: 1rem;
+        padding: 0 4px;
+        width: auto;
+        min-width: 70px;
+    }
+}
+
+  /* Hero Section CSS */
+  .main {
+    background-color: #f4cede;
+    padding-bottom: 80px;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #f4cede;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.hero-rectangle {
+    width: 1240px;
+    height: 2000px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 0;
+  
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 32px;
+    position: relative;
+}
+
+.hero-rectangle h1 {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    margin: 0;
+    text-align: left;
+    font-family: 'Anton';
+    font-size: 50px;
+    font-style: normal;
+    color: black;
+    z-index: 3;
+    width: 336px;
+    height: 90px;
+    line-height: 90px; /* vertically center text if single line */
+    overflow: hidden;  /* ensures content doesn't overflow */
+    letter-spacing: 0%;
+    line-height: auto; 
+    text-shadow:
+        -1px -1px 0 #000,
+    
+                    
+}
+
+
+.hero-line {
+    position: absolute;
+    left: 15px;
+    top: 90px;
+    width: 1210px;
+    height: 0;
+    border-top: 1px solid #000000; /* 2px normal line */
+    z-index: 2;
+}
+
+.hero-line-2 {
+    position: absolute;
+    left: 15px;
+    top: 590px;
+    width: 1210px;
+    height: 0;
+    border-top: 1px solid #000000;
+    z-index: 2;
+}
+
+.hero-text {
+    position: absolute;
+    top: 90px;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px; /* Adjust as needed */
+    color: #000;
+    z-index: 4; /* Make sure it's above the image */
+    background: transparent;
+    white-space: nowrap;
+}
+
+.hero-text-1 { left: 15px; }
+.hero-text-2 { left: 425px; }
+.hero-text-3 { left: 845px; }
+
+.hero-image {
+    position: absolute;
+    left: 15px;
+    top: 145px;
+    width: auto; /* or set a width if needed */
+    height: auto;
+}
+
+.hero-h2 {
+    position: absolute;
+    top: 606px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 640px;
+    height: 123px;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
+    color: #000;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* horizontally center text inside the box */
+}
+
+.hero-photo {
+    position: absolute;
+    left: 14.75px;
+    top: 764px;
+    width: auto; /* Set width/height as needed */
+    height: auto;
+    z-index: 3;
+}
+
+.hero-h3 {
+    position: absolute;
+    left: 305px;
+    top: 1526px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px; /* Adjust as needed */
+    color: #000;
+    z-index: 3;
+}
+
+.hero-desc {
+    position: absolute;
+    left: 173px;
+    top: 1623px;
+    width: 905px;
+    height: 118px;
+    margin: 0;
+    font-family: 'Aileron', sans-serif;
+    font-size: 20px;
+    color: #000;
+    z-index: 3;
+    letter-spacing: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-h4 {
+    position: absolute;
+    left: 396px;
+    top: 1791px;
+    width: 440px;
+    height: 47px;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px; /* Adjust as needed */
+    color: #FA1977;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;   /* align text to the top */
+    justify-content: center;   /* center text horizontally */
+    text-align: center;
+}
+
+.join-form-img {
+    position: absolute;
+    left: 410px;
+    top: 1870px;
+    width: 430px;
+    height: 90px;
+    z-index: 5;
+}
+
+/* Add this to your styles.css */
+.site-footer {
+    width: 100%;
+    min-width: 320px;
+    height: 112px;
+    background: #EB6BA4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: static; /* Remove absolute, left, and top */
+}
+
+.footer-content {
+    width: 100%;
+    text-align: center;
+    font-family: 'Aileron', sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
